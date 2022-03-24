@@ -1,0 +1,34 @@
+html, body, .row-login{
+    height:100%;
+    width: 100%;
+    margin:0;
+    display: flex;
+    font-family: $font-family-sans-serif;
+} 
+
+.login-container, .login-carousel, .login-section {
+    height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.login-carousel{
+    background-color: $primary-color;
+}
+.login-section{
+    background-color: $secondary-color;
+    color: white;
+}
+.login-form-control{
+    background-color: $secondary-color !important;
+    border-bottom: 1px solid white;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+}
+.link-white, .link-white:hover{
+    color: white;
+}

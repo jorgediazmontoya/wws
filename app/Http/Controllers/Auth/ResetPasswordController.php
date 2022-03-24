@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-
 
 class ResetPasswordController extends Controller
 {
@@ -26,19 +26,5 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        if( config( 'app.shop_registration' ) ) {
-            $this->redirectTo = '/admin';
-        } else {
-            $this->redirectTo = airoute( 'aimeos_shop_account' );
-        }
-    }
+    protected $redirectTo = RouteServiceProvider::HOME;
 }

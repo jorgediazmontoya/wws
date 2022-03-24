@@ -1,7 +1,81 @@
-@extends('shop::base')
+@extends('layouts.register')
 
 @section('content')
-<div class="aimeos container auth">
+
+<div class="login-container">
+    <div class="row row-login">
+        <div class="col-md-6 login-carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{URL::asset('img/carousel.PNG')}}" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{URL::asset('img/carousel.PNG')}}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{{URL::asset('img/carousel.PNG')}}" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 login-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex justify-content-end">
+                        <button class="btn btn-primary mr-2">Registrarse</button>
+                        <button class="btn btn-secondary">Iniciar sesión</button>
+                    </div>
+                    <div class="col-10">
+                        Registrarse o Iniciar sesión
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="login-name">Nombre y apellido:</label>
+                                <input type="text" class="form-control login-form-control" id="login-name" placeholder="Ingresa tu nombre y apellido">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-pass">Contraseña:</label>
+                                <input type="password" class="form-control login-form-control" id="login-pass" placeholder="Ingrese su contraseña">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-pass">Repite tu Contraseña:</label>
+                                <input type="password" class="form-control login-form-control" id="login-pass" placeholder="Ingrese su contraseña">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-email">E-mail:</label>
+                                <input type="email" class="form-control login-form-control" id="login-email" aria-describedby="emailHelp" placeholder="Ingresa tu e-mail">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="login-terms">
+                                <label class="form-check-label" for="login-terms">Estoy de acuerdo con los <b>términos y condiciones</b></label>
+                            </div>
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-primary mr-2">Registrarse</button>
+                                <a href="" class="link-white"  rel="noopener noreferrer">Ya tengo cuenta</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="aimeos container auth">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -70,5 +144,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection
