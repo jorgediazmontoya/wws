@@ -4,8 +4,11 @@
 // Variables
 @import 'variables';
 @import 'colors';
-@import 'main';
-@import 'login';
+@import 'bootstrap-overrides';
+@import 'breakpoints';
+@import 'global';
+@import 'mixins';
+@import 'THEME/login';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

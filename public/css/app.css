@@ -12,6 +12,18 @@
   border-color: #FFFFFF !important;
 }
 
+.btn-primary {
+  background-color: #83D5C5 !important;
+  color: white !important;
+  border-color: #83D5C5 !important;
+}
+
+.btn-secondary {
+  background-color: #FFFFFF !important;
+  color: #83D5C5 !important;
+  border-color: #FFFFFF !important;
+}
+
 html, body, .row-login {
   height: 100%;
   width: 100%;
