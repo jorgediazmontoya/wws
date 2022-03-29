@@ -1,9 +1,17 @@
 // Body
 $body-bg: #f8fafc;
 
-
+// Colors
+$primary-color: #83D5C5;
+$secondary-color: #354257;
 
 // Typography
+
+@font-face {
+    font-family: 'Mulish';
+    src: url(/public/fonts/mulish-v10-latin-regular.woff2) format('truetype');
+}
+
 $font-family-sans-serif: 'Mulish', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;

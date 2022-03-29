@@ -36,8 +36,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 d-flex justify-content-end">
-                        <button class="btn btn-primary mr-2">Registrarse</button>
-                        <button class="btn btn-secondary">Iniciar sesión</button>
+                        <button class="button button-dark mr-2">Registrarse</button>
+                        <button class="button button-light">Iniciar sesión</button>
                     </div>
                     <div class="col-10">
                         Registrarse o Iniciar sesión
@@ -63,7 +63,7 @@
                                 <label class="form-check-label" for="login-terms">Estoy de acuerdo con los <b>términos y condiciones</b></label>
                             </div>
                             <div class="mt-4">
-                                <button type="submit" class="btn btn-primary mr-2">Registrarse</button>
+                                <button type="submit" class="button button-dark mr-2">Registrarse</button>
                                 <a href="" class="link-white"  rel="noopener noreferrer">Ya tengo cuenta</a>
                             </div>
                         </form>
@@ -128,12 +128,12 @@
 
                         <div class="form-group row">
                             <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="button button-dark">
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ airoute('password.request') }}">
+                                    <a class="button button-link" href="{{ airoute('password.request') }}">
                                         {{ __('Forgot Password') }}
                                     </a>
                                 @endif

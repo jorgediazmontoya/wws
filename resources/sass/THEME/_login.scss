@@ -22,12 +22,8 @@ html, body, .row-login{
     color: white;
 }
 .login-form-control{
-    background-color: $secondary-color !important;
+    background-color: $secondary-color;
     border-bottom: 1px solid white;
-    border-top: none !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-radius: 0 !important;
 }
 .link-white, .link-white:hover{
     color: white;
