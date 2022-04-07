@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat, repeat;
   @include media-breakpoint-up(md) {
     background-image: url('/images/blur-hospital.jpg');
+    background-size: cover;
   }
 }
 
