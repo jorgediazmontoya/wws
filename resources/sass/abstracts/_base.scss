@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+  font-family: $font-mulish;
+}
+
+html {
+  body {
+    font-family: $font-mulish;
+    overflow-x: hidden;
+  }
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number] {
+  color: $color-regal-blue;
+  border: none;
+  outline-width: 0;
+  border-bottom: 1px solid $color-regal-blue;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 12px;
+  padding-#{$ldirection}: 0;
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+input {
+  &.form-control::placeholder {
+    font-size: 14px;
+    color: $color-regal-blue;
+  }
+}
+
+input[type=checkbox],
+input[type=checkbox]:checked {
+ width: 25px;
+ height: 25px;
+ border-radius: 10px;
+ background-color: $color-blue-martina;
+ border-color: $color-blue-martina;
+}

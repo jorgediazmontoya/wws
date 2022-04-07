@@ -3,75 +3,42 @@
 @section('content')
 
 <div class="login-container">
-    <div class="row row-login">
-        <div class="col-md-6 login-carousel">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{URL::asset('img/carousel.PNG')}}" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{{URL::asset('img/carousel.PNG')}}" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="{{URL::asset('img/carousel.PNG')}}" alt="Third slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-6 login-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 d-flex justify-content-end">
-                        <button class="button button-dark mr-2">Registrarse</button>
-                        <button class="button button-light">Iniciar sesión</button>
-                    </div>
-                    <div class="col-10">
-                        Registrarse o Iniciar sesión
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label for="login-name">Nombre y apellido:</label>
-                                <input type="text" class="form-control login-form-control" id="login-name" placeholder="Ingresa tu nombre y apellido">
-                            </div>
-                            <div class="form-group">
-                                <label for="login-pass">Contraseña:</label>
-                                <input type="password" class="form-control login-form-control" id="login-pass" placeholder="Ingrese su contraseña">
-                            </div>
-                            <div class="form-group">
-                                <label for="login-pass">Repite tu Contraseña:</label>
-                                <input type="password" class="form-control login-form-control" id="login-pass" placeholder="Ingrese su contraseña">
-                            </div>
-                            <div class="form-group">
-                                <label for="login-email">E-mail:</label>
-                                <input type="email" class="form-control login-form-control" id="login-email" aria-describedby="emailHelp" placeholder="Ingresa tu e-mail">
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="login-terms">
-                                <label class="form-check-label" for="login-terms">Estoy de acuerdo con los <b>términos y condiciones</b></label>
-                            </div>
-                            <div class="mt-4">
-                                <button type="submit" class="button button-dark mr-2">Registrarse</button>
-                                <a href="" class="link-white"  rel="noopener noreferrer">Ya tengo cuenta</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="row row-login">
+    <div class="col-md-6 login-left-section d-none d-sm-block">
     </div>
+    <div class="col-md-6 login-section">
+      <div class="login-section-inner">
+        <div class="row justify-content-center">
+          <div class="col-10 first-section">
+            <h1 class="login-title d-flex justify-content-center">Regístrate y Accede</h1>
+            <h3 class="login-subtitle d-flex justify-content-center">a los mejores precios y ubicaciones de farmacias</h3>
+          </div>
+          <div class="col-10 second-section">
+            <h1 class="main-title">Iniciar sesión</h1>
+            <form action="" method="post" class="mt-3">
+              <div class="form-group mt-2">
+                <label for="login-email">E-mail:</label>
+                <input type="email" class="form-control login-form-control" id="login-email" aria-describedby="emailHelp" placeholder="Ingresa tu e-mail">
+              </div>
+              <div class="form-group mt-2">
+              <label for="login-pass">Contraseña:</label>
+                <input type="password" class="form-control login-form-control" id="login-pass" placeholder="Ingrese su contraseña">
+              </div>
+              <div class="mt-4 mb-4">
+                <a href="/password/reset" class="link-dark" rel="noopener noreferrer">Olvidaste tu contraseña</a>
+              </div>
+              <div class="mt-4">
+                <button type="submit" class="button button-light button-login w-100">Iniciar Sesión</button>
+                <a href="/register" class="button button-dark mt-3 w-100" rel="noopener noreferrer">Registrarse</a>
+              </div>
+            </form>
+          </div>
+          <div class="login-bottom">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 

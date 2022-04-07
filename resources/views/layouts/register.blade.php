@@ -17,8 +17,6 @@
 
 </head>
 <body>
-    <div class="login-container">
-        @yield('content')
-    </div>
+    @yield('content')
 </body>
 </html>

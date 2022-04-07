@@ -1,9 +1,21 @@
-// Variables
-@import 'variables';
-@import 'breakpoints';
-@import 'global';
-@import 'mixins';
-@import 'THEME/login';
+// Abstract files.
+@import 'abstracts/_variables';
+@import 'abstracts/_media-queries';
+@import 'abstracts/_mixins';
+@import 'abstracts/_base';
 
-// Bootstrap
+// Vendor files
 @import '~bootstrap/scss/bootstrap';
+
+// Core files.
+@import 'core/_fonts';
+@import 'core/_typography';
+
+// Components files.
+@import 'components/_button';
+@import 'components/_link';
+@import 'components/_carousel';
+@import 'components/_slider';
+
+// Page files.
+@import 'pages/_login';

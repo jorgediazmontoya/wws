@@ -1,0 +1,82 @@
+.login {
+  &-left-section {
+    @include media-breakpoint-up(md) {
+      background-image: url('/images/bg-left-login.jpg');
+      background-size: cover;
+    }
+  }
+  &-title {
+    color: $color-regal-blue;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  &-subtitle {
+    color: $color-regal-blue;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &-container {
+    height: 100%;
+    .carousel-img {
+      width: 425px;
+    }
+    .carousel-indicators {
+      bottom: -65px;
+    }
+    .main-title {
+      font-size: 24px;
+      font-weight: 600;
+      font-family: $font-mulish;
+      color: $color-blue-martina;
+    }
+    .form-group {
+      label {
+        font-size: 22px;
+        font-weight: 700;
+        font-family: $font-mulish;
+        color: $color-blue-martina;
+      }
+    }
+    .terms-and-conditions {
+      label {
+        font-size: 12px;
+      }
+    }
+    .first-section {
+      padding-top: 95px;
+    }
+    .second-section {
+      padding-top: 23px;
+    }
+  }
+  &-section {
+    height: 100%;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+  // &-carousel {
+  //   background-color: $color-tender-turquoise;
+  // }
+  // &-section {
+  //     background-color: $color-oxford-blue;
+  //     color: $color-white;
+  // }
+  &-form-control {
+      background-color: $color-oxford-blue;
+      border-bottom: 1px solid $color-white;
+  }
+}
+
+.row-login {
+  height: 100%
+}
+
+body {
+  background-image: url('/images/bg-login-mb.jpg');
+  background-repeat: no-repeat, repeat;
+  @include media-breakpoint-up(md) {
+    background-image: url('/images/blur-hospital.jpg');
+  }
+}

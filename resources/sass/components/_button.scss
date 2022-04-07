@@ -1,0 +1,38 @@
+.button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+}
+
+.button-dark {
+  background: linear-gradient(180deg, $color-blue-martina 15.62%, $color-sea-wonder 100%);
+  color: $color-white;
+  border-color: $color-tender-turquoise;
+  margin-#{$rdirection}: 10px;
+  &:hover {
+    color: $color-white;
+  }
+}
+
+.button-light {
+  background: linear-gradient(180deg, $color-white 0%, $color-white-smoke 100%);
+  border-color: $color-white;
+  color: $color-regal-blue;
+  &:hover {
+    color: $color-regal-blue;
+  }
+}
