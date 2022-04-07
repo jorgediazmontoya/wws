@@ -1,3 +1,11 @@
+body {
+  background-image: url('/images/bg-login-mb.jpg');
+  background-repeat: no-repeat, repeat;
+  @include media-breakpoint-up(md) {
+    background-image: url('/images/blur-hospital.jpg');
+  }
+}
+
 .login {
   &-left-section {
     @include media-breakpoint-up(md) {
@@ -52,17 +60,9 @@
   &-section {
     height: 100%;
     display: flex;
-    // align-items: center;
     justify-content: center;
     align-content: center;
   }
-  // &-carousel {
-  //   background-color: $color-tender-turquoise;
-  // }
-  // &-section {
-  //     background-color: $color-oxford-blue;
-  //     color: $color-white;
-  // }
   &-form-control {
       background-color: $color-oxford-blue;
       border-bottom: 1px solid $color-white;
@@ -71,12 +71,4 @@
 
 .row-login {
   height: 100%
-}
-
-body {
-  background-image: url('/images/bg-login-mb.jpg');
-  background-repeat: no-repeat, repeat;
-  @include media-breakpoint-up(md) {
-    background-image: url('/images/blur-hospital.jpg');
-  }
 }
