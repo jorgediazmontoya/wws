@@ -1,8 +1,20 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
+// Vendor files
 @import '~bootstrap/scss/bootstrap';
+
+// Abstract files.
+@import 'abstracts/_variables';
+@import 'abstracts/_media-queries';
+@import 'abstracts/_mixins';
+@import 'abstracts/_base';
+
+// Core files.
+@import 'core/_fonts';
+@import 'core/_typography';
+
+// Components files.
+@import 'components/_button';
+@import 'components/_link';
+@import 'components/_carousel';
+
+// Page files.
+@import 'pages/_login';

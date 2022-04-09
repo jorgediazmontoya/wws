@@ -32,3 +32,7 @@ Route::group($locale ?? [], function() {
         ->name('aimeos_page')->where( 'path', '.*' );
 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

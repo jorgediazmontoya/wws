@@ -1,0 +1,8 @@
+
+// Outline style on focused elements for keyboard accessibility
+@mixin outline {
+  outline-style: auto;
+  outline-width: 1px;
+  outline-color: Highlight; // Firefox
+  outline-color: -webkit-focus-ring-color; // WebKit based browsers
+}
