@@ -1,11 +1,11 @@
+// Vendor files
+@import '~bootstrap/scss/bootstrap';
+
 // Abstract files.
 @import 'abstracts/_variables';
 @import 'abstracts/_media-queries';
 @import 'abstracts/_mixins';
 @import 'abstracts/_base';
-
-// Vendor files
-@import '~bootstrap/scss/bootstrap';
 
 // Core files.
 @import 'core/_fonts';
@@ -15,7 +15,6 @@
 @import 'components/_button';
 @import 'components/_link';
 @import 'components/_carousel';
-@import 'components/_slider';
 
 // Page files.
 @import 'pages/_login';
