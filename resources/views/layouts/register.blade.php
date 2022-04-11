@@ -28,12 +28,9 @@
 		date_input.datepicker({
 			format: 'mm/dd/yyyy',
 			container: container,
-			todayHighlight: true,
 			autoclose: true,
-      viewMode: "years",
-      changeYear: true,
-      changeMonth: true,
-      updateViewDate: true,
+      startView: "decade",
+      minViewMode: "days",
 		})
 	})
   </script>
