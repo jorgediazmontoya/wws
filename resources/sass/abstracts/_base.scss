@@ -17,7 +17,7 @@ input[type=password],
 input[type=number] {
   color: $color-regal-blue;
   font-size: 14px;
-  padding-#{$ldirection}: 15px;
+  padding-#{$ldirection}: 0;
   height: 50px;
   border-radius: 5px;
   background-color: $color-bleached-silk;
@@ -50,6 +50,7 @@ select {
     border-radius: 5px;
     background-color: $color-bleached-silk;
     border: none;
+    padding-#{$ldirection}: 0;
     @include media-breakpoint-up(md) {
       height: 40px;
     }
@@ -59,9 +60,21 @@ select {
 
 input[type=checkbox],
 input[type=checkbox]:checked {
- width: 25px;
- height: 25px;
+ width: 20px;
+ height: 20px;
  border-radius: 10px;
  background-color: $color-blue-martina;
  border-color: $color-blue-martina;
+}
+
+
+.icon {
+  color: $color-blue-martina;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  background-color: $color-bleached-silk;
+  i {
+    font-size: 20px;
+  }
 }
