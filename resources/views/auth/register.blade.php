@@ -18,48 +18,49 @@
           <h3 class="login-subtitle d-flex justify-content-center">a los mejores precios y ubicaciones de farmacias</h3>
         </div>
         <div class="col-10 col-md-8 login-form">
-          <form action="" method="post">
+          <form method="POST" action="{{ airoute('register') }}">
+            @csrf
             <div class="input-group">
               <span class="icon"><i class="bi-person-fill"></i></span>
-              <input type="text" class="form-control" id="login-name" placeholder="Ingresa tu nombre">
+              <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Ingresa tu nombre" required>
             </div>
             <div class="input-group">
               <span class="icon"><i class="bi-lock-fill"></i></span>
-              <input type="password" class="form-control" id="login-pass" placeholder="Ingresa tu contraseña">
+              <input type="password" class="form-control @error('pass') is-invalid @enderror" id="pass" name="pass" placeholder="Ingresa tu contraseña" required>
             </div>
             <div class="input-group">
               <span class="icon"><i class="bi-lock-fill"></i></span>
-              <input type="password" class="form-control" id="login-pass" placeholder="Repite tu contraseña">
+              <input type="password" class="form-control @error('pass') is-invalid @enderror" id="pass" name="pass" placeholder="Repite tu contraseña" required>
             </div>
             <div class="input-group">
               <span class="icon"><i class="bi-envelope-fill"></i></span>
-              <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Ingresa tu email">
+              <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" aria-describedby="emailHelp" placeholder="Ingresa tu email" required>
             </div>
             <div class="input-group select-country">
               <span class="icon"><i class="bi-geo-alt-fill"></i></span>
-              <select name="country" class="countries order-alpha presel-EC group-continents group-order-alpha form-select" id="countryId">
+              <select name="country" class="countries order-alpha presel-EC group-continents group-order-alpha form-select" id="countryId" required>
                 <option value="">Seleccionar País</option>
               </select>
             </div>
             <div class="input-group select-state">
               <span class="icon"><i class="bi-geo-alt-fill"></i></span>
-              <select name="state" class="states form-select" id="stateId">
+              <select name="state" class="states form-select" id="stateId" required>
                 <option value="">Seleccionar Estado o Provicia</option>
               </select>
             </div>
             <div class="input-group select-city">
               <span class="icon"><i class="bi-geo-alt-fill"></i></span>
-              <select name="city" class="cities form-select" id="cityId">
+              <select name="city" class="cities form-select" id="cityId" required>
                 <option value="">Seleccionar Ciudad</option>
               </select>
             </div>
             <div class="input-group birthday-date input-group">
               <span class="icon"><i class="bi-calendar2-date-fill"></i></span>
-              <input type="text" class="form-select" id="date" name="date" placeholder="Fecha de nacimiento"/>
+              <input type="text" class="form-select" id="date" name="date" placeholder="Fecha de nacimiento" required />
             </div>
             <div class="form-check terms-and-conditions">
-              <input type="checkbox" class="form-check-input" id="login-terms">
-              <label class="form-check-label mt-1 ms-2" for="login-terms">Estoy de acuerdo con los <b>términos y condiciones</b></label>
+              <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+              <label class="form-check-label mt-1 ms-2" for="terms">Estoy de acuerdo con los <b>términos y condiciones</b></label>
             </div>
             <div class="mt-4">
               <button type="submit" class="button button-dark w-100">Registrarse</button>

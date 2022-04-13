@@ -57,15 +57,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         $validate = [
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'confirmed', 'max:64', Password::defaults()],
+            // 'name' => ['required', 'string'],
+            // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            // 'pass' => ['required', 'string', 'confirmed', 'max:64', Password::defaults()],
         ];
-
-        if( config( 'app.shop_registration' ) ) {
-            $validate['code'] = ['required', 'string', 'max:255', 'unique:mshop_locale_site', 'regex:/^[a-z0-9\-]+(\.[a-z0-9\-]+)?$/i'];
-        } else {
-            $validate['name'] = ['required', 'string', 'max:255'];
-        }
 
         return Validator::make( $data, $validate );
     }
@@ -100,9 +95,13 @@ class RegisterController extends Controller
         }
 
         $user = User::create([
-            'name' => $data['code'] ?? $data['name'],
+            'name' => $data['name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'country' => $data['country'],
+            'state' => $data['state'],
+            'city' => $data['city'],
+            'date' => $data['date'],
+            'password' => Hash::make($data['pass']),
             'siteid' => $siteId,
         ]);
 

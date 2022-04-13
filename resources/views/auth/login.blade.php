@@ -18,18 +18,31 @@
             <h3 class="login-subtitle d-flex justify-content-center">a los mejores precios y ubicaciones de farmacias</h3>
           </div>
           <div class="col-10 col-md-8 login-form">
-            <form action="" method="post" class="mt-3">
+            <form action="{{ airoute('login') }}" method="POST" class="mt-3">
+              @csrf
               <div class="input-group">
                 <span class="icon"><i class="bi-envelope-fill"></i></span>
-                <input type="email" class="form-control" id="login-email" aria-describedby="Ingresa tu e-mail" placeholder="Ingresa tu e-mail">
+                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="login-email" aria-describedby="Ingresa tu e-mail" placeholder="Ingresa tu e-mail" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
               </div>
               <div class="input-group">
                 <span class="icon"><i class="bi-lock-fill"></i></span>
-                <input type="password" class="form-control" id="login-pass" placeholder="Ingrese su contraseña">
+                <input type="password" class="form-control @error('password') is-invalid @enderror" id="pass" placeholder="Ingrese su contraseña" name="password">
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
               </div>
               <div class="mt-3">
                 <button type="submit" class="button button-dark w-100">Iniciar Sesión</button>
-                <a href="/password/reset" class="link-dark mt-3 mb-4 w-100 d-flex justify-content-center" rel="noopener noreferrer">Olvidaste tu contraseña</a>
+                @if (Route::has('password.request'))
+                    <a href="{{ airoute('password.request') }}" class="link-dark mt-3 mb-4 w-100 d-flex justify-content-center" rel="noopener noreferrer">Olvidaste tu contraseña</a>
+                @endif
                 <a href="/register" class="link-dark mt-3 mb-4 w-100 d-flex justify-content-center" rel="noopener noreferrer">Registrarse</a>
               </div>
             </form>
