@@ -1,7 +1,7 @@
 <tr>
-    <td class="header">
-        <a href="{{ $url }}">
-            {{ $slot }}
+    <td>
+        <a href="{{ $url }}" class="header-txt">
+            Email Confirmation
         </a>
     </td>
 </tr>

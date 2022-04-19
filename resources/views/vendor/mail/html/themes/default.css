@@ -117,6 +117,14 @@ img {
     text-shadow: 0 1px 0 white;
 }
 
+.header-txt{
+    color: #024F6B;
+    font-family: Mulish;
+    font-size: 30px;
+    font-weight: 700, bold;
+    line-height: 37.65px;
+}
+
 /* Body */
 
 .body {
@@ -218,6 +226,12 @@ img {
     display: inline-block;
     text-decoration: none;
     -webkit-text-size-adjust: none;
+}
+
+.button-dark{
+    background: linear-gradient(180deg, #15C7CB 15.62%, #0EA0C0 100%);
+    color: white;
+    border-color: #83D5C5;
 }
 
 .button-blue,

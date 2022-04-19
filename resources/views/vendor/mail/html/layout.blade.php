@@ -37,8 +37,6 @@
                                 <tr>
                                     <td class="content-cell">
                                         {{ Illuminate\Mail\Markdown::parse($slot) }}
-
-                                        {{ $subcopy ?? '' }}
                                     </td>
                                 </tr>
                             </table>

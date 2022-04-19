@@ -36,11 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.sendgrid.net'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME', 'apikey'),
-            'password' => env('MAIL_PASSWORD', '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'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+            'port' => env('MAIL_PORT', 465),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+            'username' => env('MAIL_USERNAME', 'info@difvision.com'),
+            'password' => env('MAIL_PASSWORD', '<D4dmDSF1'),
             'timeout' => null,
             'auth_mode' => null,
         ],
