@@ -1,0 +1,12 @@
+.card-container{
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+    @include media-breakpoint-down(sm) {
+        display: block;
+        text-align: -webkit-center;
+        .card{
+            margin-top: 10px;
+        }
+    }
+}

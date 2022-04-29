@@ -11,28 +11,35 @@
 |
 */
 
-if( env( 'SHOP_MULTILOCALE' ) )
-{
-    $locale = ['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}(\_[a-zA-Z]{2})?']];
+// if( env( 'SHOP_MULTILOCALE' ) )
+// {
+//     $locale = ['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}(\_[a-zA-Z]{2})?']];
 
-    Route::get('/', function () {
-        return redirect(app()->getLocale());
-    });
-}
+//     Route::get('/', function () {
+//         return redirect(app()->getLocale());
+//     });
+// }
 
 
-Route::group($locale ?? [], function() {
+// Route::group($locale ?? [], function() {
 
-    // only if SHOP_MULTILOCALE isn't enabled due to restrictions in Laravel
-    Auth::routes(['verify' => true]);
+//     // only if SHOP_MULTILOCALE isn't enabled due to restrictions in Laravel
+//     Auth::routes(['verify' => true]);
 
-    Route::get('/', '\Aimeos\Shop\Controller\CatalogController@homeAction')->name('aimeos_home');
+//     Route::get('/', '\Aimeos\Shop\Controller\CatalogController@homeAction')->name('aimeos_home');
 
-    Route::match(['GET', 'POST'], '{path?}', '\Aimeos\Shop\Controller\PageController@indexAction')
-        ->name('aimeos_page')->where( 'path', '.*' );
+//     Route::match(['GET', 'POST'], '{path?}', '\Aimeos\Shop\Controller\PageController@indexAction')
+//         ->name('aimeos_page')->where( 'path', '.*' );
 
-});
+// });
+
+
 
 Auth::routes();
 
+
+Route::get('/', [App\Http\Controllers\WaylipHomeController::class, 'index']);
+Route::post('/search', [App\Http\Controllers\WaylipHomeController::class, 'search'])->name('postSearch');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
