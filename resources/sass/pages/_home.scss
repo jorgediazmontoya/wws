@@ -1,0 +1,14 @@
+.home {
+  .title {
+    color: $color-blue-martina;
+  }
+  &-right-section {
+    @include media-breakpoint-up(md) {
+      background-image: url("/images/bg-right-home.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: right;
+      height: 550px;
+    }
+  }
+}

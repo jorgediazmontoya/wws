@@ -22,6 +22,7 @@ window.Vue = require('vue').default;
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('filter-component', require('./components/FilterComponent.vue').default);
 Vue.component('card-component', require('./components/CardComponent.vue').default);
+Vue.component('select-component', require('./components/SelectComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

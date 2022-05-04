@@ -6,20 +6,21 @@ use Illuminate\Http\Request;
 
 class WaylipHomeController extends Controller
 {
-    public function index()
-    {
-        return view('home/index');
-    }
+  public function index()
+  {
+    $options = array(
+      'forma' => ['Capsulas líquidas', 'Jarabes'],
+      'presentacion' => ['200ml', '500ml'],
+      'cantidad' => ['Caja x 10', 'Unidad']
+    );
 
-    public function search()
-    {
-        dd('hola');
-        $searchResponse = 'patata';
+    return view('home/index')->with([
+      'options' => $options
+    ]);
+  }
 
-        return view('home/index')
-        ->with([
-            'searchResponse' => $searchResponse
-        ]);
-    }
+  public function search()
+  {
+  }
 
 }

@@ -1,36 +1,49 @@
 body {
-  background-image: url('/images/bg-login-mb.jpg');
+  background-image: url("/images/bg-login-mb.jpg");
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-attachment: fixed;
   @include media-breakpoint-up(md) {
-    background-image: url('/images/blur-hospital.jpg');
+  background-image: url("/images/blur-hospital.jpg");
   }
+}
+
+.login-nav {
+  color: $color-blue-martina;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 0.3rem;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  list-style: none;
+}
+.login-nav:hover {
+  color: $color-sea-wonder;
 }
 
 .login {
   &-logo {
-    @include media-breakpoint-up(md) {
-      width: 257px;
-      height: 108px;
-      margin: 28px 28px 0;
-      background-image: url('/images/logo.png');
-      background-size: cover;
-    }
+  @include media-breakpoint-up(md) {
+    width: 257px;
+    height: 108px;
+    margin: 28px 28px 0;
+    background-image: url("/images/logo.png");
+    background-size: cover;
+  }
   }
   &-row {
     height: 100%;
   }
   &-left-section {
-    @include media-breakpoint-up(md) {
-      background-image: url('/images/bg-left-login.jpg');
-    }
+  @include media-breakpoint-up(md) {
+    background-image: url("/images/bg-left-login.jpg");
+  }
   }
   &-right-section-row {
-    @include media-breakpoint-up(md) {
-      height: 100%;
-      align-items: center;
-    }
+  @include media-breakpoint-up(md) {
+    height: 100%;
+    align-items: center;
+  }
   }
   &-header {
     padding: 95px 0 32px;
@@ -38,26 +51,26 @@ body {
   &-header-pc {
     text-align: $rdirection;
     margin-top: 65px;
-    h1,
-    h3 {
-      color: $color-white;
-    }
+  h1,
+  h3 {
+    color: $color-white;
+  }
   }
   &-form {
     background-color: $color-white;
     border-radius: 5px;
     margin-bottom: 100px;
-    @include media-breakpoint-up(md) {
-      margin: 0;
-    }
-    .input-group,
-    .select-country,
-    .select-state,
-    .select-city,
-    .birthday-date,
-    .form-check {
-       margin-top: 11px;
-    }
+  @include media-breakpoint-up(md) {
+    margin: 0;
+  }
+  .input-group,
+  .select-country,
+  .select-state,
+  .select-city,
+  .birthday-date,
+  .form-check {
+    margin-top: 11px;
+  }
   }
   &-title {
     color: $color-regal-blue;
@@ -73,38 +86,38 @@ body {
   }
   &-container {
     height: 100%;
-    .form-group {
-      label {
-        font-size: 22px;
-        font-weight: 700;
-        font-family: $font-mulish;
-        color: $color-blue-martina;
-      }
-    }
-    .terms-and-conditions {
-      display: flex;
-      align-items: center;
-      label {
-        font-size: 12px;
-        color: $color-regal-blue;
-        font-weight: 600;
-      }
-    }
-    .birthday-date {
-      input {
-        font-size: 14px;
-        height: 50px;
-        border-radius: 5px;
-        background-color: $color-bleached-silk;
-        border: none;
-        @include media-breakpoint-up(md) {
-          height: 40px;
-        }
-        &::placeholder {
-          font-size: 14px;
-          color: $color-regal-blue;
-        }
-      }
-    }
+  .form-group {
+  label {
+    font-size: 22px;
+    font-weight: 700;
+    font-family: $font-mulish;
+    color: $color-blue-martina;
+  }
+  }
+  .terms-and-conditions {
+    display: flex;
+    align-items: center;
+  label {
+    font-size: 12px;
+    color: $color-regal-blue;
+    font-weight: 600;
+  }
+  }
+  .birthday-date {
+  input {
+    font-size: 14px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: $color-bleached-silk;
+    border: none;
+  @include media-breakpoint-up(md) {
+    height: 40px;
+  }
+  &::placeholder {
+    font-size: 14px;
+    color: $color-regal-blue;
+  }
+  }
+  }
   }
 }

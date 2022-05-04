@@ -2,26 +2,31 @@
 
 @section('content')
 
-@isset($searchResponse)
-{{ searchResponse }}
-@endisset
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-7 col-12">
-            <h1>Encuentra el mejor empleo</h1>
-            <span>Busca el precio más conveniente comparando en todas las farmacias</span>
-            <filter-component post-route="{{ route('postSearch') }}"></filter-component>
-            <card-component class="w-100"></card-component>
+<div class="home">
+  <div class="home-row row justify-content-center">
+    <div class="col-lg-9 col-12 py-4">
+      <div class="container mx-4">
+        <h3 class="title">Encuentra el mejor precio</h3>
+        <span>Busca el precio más conveniente comparando en todas las farmacias</span>
+        <div class="mt-4">
+          <filter-component post-route="{{ route('postSearch') }}"></filter-component>
         </div>
-        <div class="col-lg-5 col-12 px-4">
-            <img class="w-100" src="{{asset('images/search-img.png')}}" alt="">
-            <p class="mt-2">La app más sencilla para buscar y encontrar el mejor precio de tus medicinas comparando y
-                poniendo do a
-                tu disposición
-                las mejores promociones del mercado</p>
+        <div class="d-flex mt-2 justify-content-center">
+          <select-component class="mx-2" title="Forma Farmacéutica"
+            v-bind:options="{{  json_encode($options['forma']) }}">
+          </select-component>
+          <select-component class="mx-2" title="Presentación"
+            v-bind:options="{{  json_encode($options['presentacion']) }}">
+          </select-component>
+          <select-component class="mx-2" title="Cantidad" v-bind:options="{{  json_encode($options['cantidad']) }}">
+          </select-component>
         </div>
+      </div>
     </div>
+
+    <div class="col-lg-3 col-12 px-4 home-right-section">
+    </div>
+  </div>
 </div>
 
 @endsection

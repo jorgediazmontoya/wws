@@ -1,22 +1,24 @@
 // Vendor files
-@import '~bootstrap/scss/bootstrap';
-@import '~bootstrap-icons/font/bootstrap-icons';
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons";
 
 // Abstract files.
-@import 'abstracts/_variables';
-@import 'abstracts/_media-queries';
-@import 'abstracts/_mixins';
-@import 'abstracts/_base';
+@import "abstracts/_variables";
+@import "abstracts/_media-queries";
+@import "abstracts/_mixins";
+@import "abstracts/_base";
 
 // Core files.
-@import 'core/_fonts';
-@import 'core/_typography';
+@import "core/_fonts";
+@import "core/_typography";
 
 // Components files.
-@import 'components/_button';
-@import 'components/_card';
-@import 'components/_link';
-@import 'components/_carousel';
+@import "components/_button";
+@import "components/_card";
+@import "components/_link";
+@import "components/_carousel";
+@import "components/_select";
 
 // Page files.
-@import 'pages/_login';
+@import "pages/_login";
+@import "pages/_home";
